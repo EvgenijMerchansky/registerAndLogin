@@ -1,0 +1,32 @@
+<div class="logined-page">
+
+  <div *ngIf="admin() == 'true' ? true : false" class="admin-panel">
+    <h1>Administrator Panel</h1>
+
+    <popup #popup2 (confirmClick)="YourConfirmEvent($event)">
+      You can change users names in this block:
+      <ul>
+        <li><input type="text" name="" value="{{currentitem}}" [(ngModel)]="items" #itemval /><button type="button" (click)="delFunc($event)" name="button">Delete</button></li>
+      </ul>
+    </popup>
+    <h2 (click)="test()">Registrated users:</h2>
+
+    <ul>
+      <li *ngFor="let i of mappedArr">{{i.name}} <button type="button" name="button" (click)="ClickButton($event)">Change user</button></li>
+    </ul>
+  </div>
+
+  <div class='maps' *ngIf="admin() == 'false' ? true : false">
+
+    <h1>User Page:</h1>
+    <input type="text" class="input" placeholder="Search..." #inputElement>
+    <div class="map" #mapElement>
+    </div>
+    <ul>
+      <li *ngFor="let z of arrayForRender">{{z}} <button type="button" class='del-btn' (click)="delFuncLoc($event)" name="button">x</button></li>
+    </ul>
+  </div>
+
+
+
+</div>

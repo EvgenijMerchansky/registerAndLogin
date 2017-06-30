@@ -1,0 +1,24 @@
+<div class="register">
+  <h1>Welcome to register page!</h1>
+  <br/>
+  <form class="register-page-form" method="post" #myForm="ngForm">
+
+    <div class="register-page-form-newlog">
+      <input placeholder="Type new login" type="text" required minlength="6" maxlength="20" [(ngModel)] = regFields.newLogin #newLogin="ngModel" name="newLogin"/>
+      <div *ngIf="regFields.newLogin.length == 0 || regFields.newLogin.length < 6" class="alert alert-danger register-page-form-newlog-alert"> Invalid login!</div>
+    </div>
+
+    <div class="register-page-form-pass">
+      <input placeholder="Type new password" type="password" [(ngModel)] = regFields.newPass #newPass="ngModel" name="password"/>
+      <div *ngIf="regFields.newPass.length == 0 || regFields.newPass.length < 8" class="alert alert-danger register-page-form-newlog-alert"> Invalid password!</div>
+    </div>
+
+    <div class="register-page-form-repass">
+      <input placeholder="Again password" type="password" [(ngModel)] = regFields.rePass #rePass="ngModel" name="rePassword"/>
+      <div *ngIf="regFields.rePass.length == 0 || regFields.rePass.length < 8 || regFields.newPass != regFields.rePass" class="alert alert-danger register-page-form-newlog-alert"> Invalid password!</div>
+    </div>
+
+  </form>
+
+  <a [class.disabled]="regFields.newLogin.length == 0 || regFields.newLogin.length < 6 || regFields.newPass.length == 0 || regFields.newPass.length < 8 || regFields.rePass.length == 0 || regFields.rePass.length < 8 || regFields.newPass != regFields.rePass ? true : false" routerLink="/register:register_page" routerLinkActive="active" (click)="log($event)">Register!</a>
+</div>

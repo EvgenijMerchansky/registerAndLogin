@@ -1,0 +1,17 @@
+<div class="login-page">
+  <h1>{{ title }}</h1>
+  <!-- <br/> -->
+  <form class="login-page-form" method="post" #myForm="ngForm">
+    <div class="login-page-form-log">
+        <input placeholder="Login" type="text" required minlength="6" maxlength="20" [(ngModel)] = model.login #login="ngModel" name="login"/>
+      <div *ngIf="show() != true" class="alert alert-danger login-page-form-log-alert"> Invalid login!</div>
+    </div>
+
+    <div class="login-page-form-pass">
+      <input placeholder="Password" type="password" [(ngModel)] = model.password #password="ngModel" name="password"/>
+      <div *ngIf="show() != true" class="alert alert-danger login-page-form-log-alert"> Invalid password!</div>
+    </div>
+  </form>
+  <br/>
+  <a [class.disabled]="show() == true ? false : true" routerLink="/login:logined" (click)="show($event,login,password)" routerLinkActive="active">Login!</a>
+</div>

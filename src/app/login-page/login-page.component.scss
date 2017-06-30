@@ -1,0 +1,108 @@
+.logined-page{
+  background: #fff;
+  opacity: .9;
+  color: #000;
+  width: 700px;
+  margin: 70px auto;
+  padding: 25px;
+  border-radius: 7px;
+
+  h2{
+    color: #00919e;
+    text-align: center;
+  }
+
+  &:hover{
+    opacity: 1;
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li{
+    margin: 2px 0;
+    padding: 0;
+    text-align: justify;
+    padding: 5px;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    &:hover{
+      button {
+        color: #000;
+      }
+    }
+
+    input{
+      margin-left: 20px;
+      height: 18px;
+      padding: 3px;
+      border: solid 1px #ccc;
+      border-radius: 2px;
+      outline: none;
+      width: 79%;
+    }
+
+    button{
+
+      margin-left: 10px;
+      background-color: transparent;
+      border: none;
+      color: transparent;
+      outline: none;
+
+    }
+  }
+
+  h1{
+    text-align: center;
+    color: #00919e;
+  }
+}
+
+agm-map {
+  height: 300px;
+}
+
+.maps{
+  text-align: center;
+}
+
+.map {
+    width: 620px;
+    height: 400px;
+    margin: 10px auto;
+}
+.input {
+
+    border: 1px solid silver;
+        border-radius: 15px;
+        outline: none;
+
+    font-family: Roboto;
+        font-size: 15px;
+        font-weight: lighter;
+        text-align: center;
+
+    padding: 10px;
+    z-index: 100;
+    width: 250px;
+}
+
+button{
+  width: initial;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  background-color: #00aabc;
+  outline: none;
+  margin: 10px auto;
+
+  &:hover{
+    background-color: #07818e;
+  }
+}

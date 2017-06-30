@@ -1,0 +1,85 @@
+$basic-color: #000;
+$text-color: #fff;
+
+.login-page{
+
+  &-form{
+
+    &-log{
+      padding: 30px;
+      text-align: center;
+
+      &-alert{
+        width: 250px;
+        margin: 0 auto;
+      }
+
+    }
+
+    &-pass{
+      text-align: center;
+      padding: 30px;
+      margin-bottom: 20px;
+
+    }
+
+  }
+
+  a.disabled {
+   pointer-events: none;
+   cursor: default;
+   opacity: .3;
+   display: block;
+   height: 70px;
+   text-align: center;
+   margin: 0 auto;
+  }
+
+  &-model{
+    border: solid 2px #fff;
+    border-radius: 2px;
+    width: 600px;
+    margin: 70px auto;
+  }
+
+
+
+  h1{
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  input{
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 250px;
+    color: $basic-color;
+    border-radius: 5px;
+    padding: 7px;
+    margin-bottom: 8px;
+  }
+
+  a{
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: solid 2px #fff;
+    color: $text-color;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 15px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    height: 70px;
+    text-align: center;
+    margin: 0 auto;
+
+    &:hover{
+      border: solid 2px #ccc;
+      color: #eee;
+    }
+  }
+}

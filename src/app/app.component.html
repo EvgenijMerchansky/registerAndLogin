@@ -1,0 +1,8 @@
+<div class="home">
+  <div class="home__wrapper">
+    <a id="signIn" routerLink="/login" #signIn routerLinkActive="active">Sign in</a>
+    <a id="signOut" routerLink="/" #signOut (click)="locRel()" routerLinkActive="active">Sign Out</a>
+    <a id="register" routerLink="/register" #register routerLinkActive="active">Register</a>
+    <router-outlet></router-outlet>
+  </div>
+</div>
